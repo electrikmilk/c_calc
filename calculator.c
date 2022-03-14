@@ -2,18 +2,18 @@
 #include <string.h>
 #include "calculator.h"
 
-void main() {
-	double opt1, opt2, result;
+int main() {
+	int opt1, opt2, result;
 	char method;
 
 	printf("Enter operand: ");
 	scanf("%d",&opt1);
 
-	printf("Enter second operand: ");
-	scanf("%d",&opt2);
-
 	printf("Enter method (add,sub,mul,div): ");
-	scanf("%s",&method);
+        scanf("%s",&method);
+
+	printf("Enter second operand: ");
+	scanf("%d",&opt2);	
 
 	if(strcmp(&method,"add") == 0) {
 		add(&opt1,&opt2,&result);
@@ -24,29 +24,29 @@ void main() {
 	} else if(strcmp(&method,"div") == 0) {
 		div(&opt1,&opt2,&result);
 	} else {
-		printf("Invalid method");
-		return;
+		printf("Invalid method\n");
+		return 1;
 	}
 	printf("Result: %d\n", result);
-	return;
+	return 0;
 }
 
-void add(double *opt1, double *opt2, double *result) {
+void add(int *opt1, int *opt2, int *result) {
 	*result = *opt1 + *opt2;
 	return;
 }
 
-void sub(double *opt1, double *opt2, double *result) {
+void sub(int *opt1, int *opt2, int *result) {
 	*result = *opt1 - *opt2;
 	return;
 }
 
-void mul(double *opt1, double *opt2, double *result) {
+void mul(int *opt1, int *opt2, int *result) {
 	*result = *opt1 * *opt2;
 	return;
 }
 
-void div(double *opt1, double *opt2, double *result) {
+void div(int *opt1, int *opt2, int *result) {
 	*result = *opt1 / *opt2;
 	return;
 }

@@ -1,4 +1,4 @@
-void add(double *opt1, double *opt2, double *result);
-void sub(double *opt1, double *opt2, double *result);
-void mul(double *opt1, double *opt2, double *result);
-void div(double *opt1, double *opt2, double *result);
+void add(int *opt1, int *opt2, int *result);
+void sub(int *opt1, int *opt2, int *result);
+void mul(int *opt1, int *opt2, int *result);
+void div(int *opt1, int *opt2, int *result);
